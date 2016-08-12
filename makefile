@@ -111,10 +111,10 @@ docdvi: tommath.src
 	cd pics ; MAKE=${MAKE} ${MAKE}
 	echo "hello" > tommath.ind
 	perl booker.pl
-	latex tommath > /dev/null
-	latex tommath > /dev/null
+	latex tommath 
+	latex tommath 
 	makeindex tommath
-	latex tommath > /dev/null
+	latex tommath 
 
 # poster, makes the single page PDF poster
 poster: poster.tex
@@ -150,10 +150,10 @@ mandvi: bn.tex
 	mv bn-deterministic.tex bn.tex
 	touch --reference=bn.bak bn.tex
 	echo "hello" > bn.ind
-	latex bn > /dev/null
-	latex bn > /dev/null
+	latex bn 
+	latex bn 
 	makeindex bn
-	latex bn > /dev/null
+	latex bn 
 
 #LTM user manual [pdf]
 manual:	mandvi
